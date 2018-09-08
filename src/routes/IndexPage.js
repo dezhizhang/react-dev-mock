@@ -1,10 +1,14 @@
 import React from 'react';
 import { connect } from 'dva';
 import styles from './IndexPage.css';
+import axios from 'axios';
 
 function IndexPage() {
+
   return (
+
     <div className={styles.normal}>
+      <button className='btn btn-primary' onClick={()=>axios.get('/api/users')}>获取数据</button>
       <h1 className={styles.title}>Yay! Welcome to dva!</h1>
       <div className={styles.welcome} />
       <ul className={styles.list}>
